@@ -1,0 +1,58 @@
+10720108f287a76a898c3a44ffdd3afb
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _react2 = require("@testing-library/react");
+
+var _App = _interopRequireDefault(require("./App"));
+
+var _userEvent = _interopRequireDefault(require("@testing-library/user-event"));
+
+var _fetchShow = require("./api/fetchShow");
+
+var _jsxFileName = "/home/thisguycodez/op/React-Testing-TV-Show/src/app.test.js";
+test('Is the App rendering without crashing', () => {
+  const mockApp = jest.fn();
+  const {
+    getByText,
+    getAllByText,
+    debug,
+    container
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: void 0
+  }));
+  expect(container.firstChild).toMatchSnapshot();
+  getByText(/Fetching data.../i);
+});
+test('User is able to select a season', async () => {
+  // mockFetchShow.mockResolvedValueOnce(showData);
+  const {
+    getByText,
+    getAllByText
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: void 0
+  }));
+  await (0, _react2.wait)(() => {
+    getByText(/select a season/i);
+  });
+
+  _userEvent.default.click(getByText(/select a season/i));
+
+  expect(getAllByText(/season /i)).toHaveLength(4);
+
+  _userEvent.default.click(getByText(/select a season/i));
+
+  expect(getByText(/select a season/i)).toBeOnDocument();
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC50ZXN0LmpzIl0sIm5hbWVzIjpbInRlc3QiLCJtb2NrQXBwIiwiamVzdCIsImZuIiwiZ2V0QnlUZXh0IiwiZ2V0QWxsQnlUZXh0IiwiZGVidWciLCJjb250YWluZXIiLCJleHBlY3QiLCJmaXJzdENoaWxkIiwidG9NYXRjaFNuYXBzaG90IiwidXNlckV2ZW50IiwiY2xpY2siLCJ0b0hhdmVMZW5ndGgiLCJ0b0JlT25Eb2N1bWVudCJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBOztBQUNBOztBQUNBOztBQUNBOztBQUNBOzs7QUFHQUEsSUFBSSxDQUFDLHVDQUFELEVBQTBDLE1BQUk7QUFDakQsUUFBTUMsT0FBTyxHQUFHQyxJQUFJLENBQUNDLEVBQUwsRUFBaEI7QUFDQSxRQUFNO0FBQUVDLElBQUFBLFNBQUY7QUFBYUMsSUFBQUEsWUFBYjtBQUEyQkMsSUFBQUEsS0FBM0I7QUFBbUNDLElBQUFBO0FBQW5DLE1BQWdELG9CQUFPLDZCQUFDLFlBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFBUCxDQUF0RDtBQUVBQyxFQUFBQSxNQUFNLENBQUNELFNBQVMsQ0FBQ0UsVUFBWCxDQUFOLENBQTZCQyxlQUE3QjtBQUdBTixFQUFBQSxTQUFTLENBQUMsbUJBQUQsQ0FBVDtBQUVBLENBVEcsQ0FBSjtBQWNBSixJQUFJLENBQUMsaUNBQUQsRUFBb0MsWUFBVztBQUNuRDtBQUNBLFFBQU07QUFBRUksSUFBQUEsU0FBRjtBQUFZQyxJQUFBQTtBQUFaLE1BQTZCLG9CQUFPLDZCQUFDLFlBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFBUCxDQUFuQztBQUVBLFFBQU0sa0JBQUssTUFBSztBQUNaRCxJQUFBQSxTQUFTLENBQUMsa0JBQUQsQ0FBVDtBQUNILEdBRkssQ0FBTjs7QUFLQU8scUJBQVVDLEtBQVYsQ0FBZ0JSLFNBQVMsQ0FBQyxrQkFBRCxDQUF6Qjs7QUFDQUksRUFBQUEsTUFBTSxDQUFDSCxZQUFZLENBQUMsVUFBRCxDQUFiLENBQU4sQ0FBaUNRLFlBQWpDLENBQThDLENBQTlDOztBQUVBRixxQkFBVUMsS0FBVixDQUFnQlIsU0FBUyxDQUFDLGtCQUFELENBQXpCOztBQUdBSSxFQUFBQSxNQUFNLENBQUNKLFNBQVMsQ0FBQyxrQkFBRCxDQUFWLENBQU4sQ0FBc0NVLGNBQXRDO0FBRUMsQ0FqQkcsQ0FBSiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyByZW5kZXIsIHdhaXQgfSBmcm9tICdAdGVzdGluZy1saWJyYXJ5L3JlYWN0JztcbmltcG9ydCBBcHAgZnJvbSAnLi9BcHAnXG5pbXBvcnQgdXNlckV2ZW50IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvdXNlci1ldmVudCdcbmltcG9ydCB7ZmV0Y2hTaG93IGFzIG1vY2tGZXRjaFNob3d9IGZyb20gJy4vYXBpL2ZldGNoU2hvdydcblxuXG50ZXN0KCdJcyB0aGUgQXBwIHJlbmRlcmluZyB3aXRob3V0IGNyYXNoaW5nJywgKCk9Pntcblx0Y29uc3QgbW9ja0FwcCA9IGplc3QuZm4oKTtcblx0Y29uc3QgeyBnZXRCeVRleHQsIGdldEFsbEJ5VGV4dCwgZGVidWcgLCBjb250YWluZXJ9ID0gcmVuZGVyKDxBcHAgLz4pO1xuXG5cdGV4cGVjdChjb250YWluZXIuZmlyc3RDaGlsZCkudG9NYXRjaFNuYXBzaG90KClcblxuXHRcblx0Z2V0QnlUZXh0KC9GZXRjaGluZyBkYXRhLi4uL2kpO1xuXG59KSBcblxuXG5cblxudGVzdCgnVXNlciBpcyBhYmxlIHRvIHNlbGVjdCBhIHNlYXNvbicsIGFzeW5jKCkgPT4ge1xuLy8gbW9ja0ZldGNoU2hvdy5tb2NrUmVzb2x2ZWRWYWx1ZU9uY2Uoc2hvd0RhdGEpO1xuY29uc3QgeyBnZXRCeVRleHQsZ2V0QWxsQnlUZXh0IH0gPSByZW5kZXIoPEFwcCAvPik7XG5cbmF3YWl0IHdhaXQoKCkgPT57XG4gICAgZ2V0QnlUZXh0KC9zZWxlY3QgYSBzZWFzb24vaSlcbn0pIFxuXG5cbnVzZXJFdmVudC5jbGljayhnZXRCeVRleHQoL3NlbGVjdCBhIHNlYXNvbi9pKSlcbmV4cGVjdChnZXRBbGxCeVRleHQoL3NlYXNvbiAvaSkpLnRvSGF2ZUxlbmd0aCg0KTtcblxudXNlckV2ZW50LmNsaWNrKGdldEJ5VGV4dCgvc2VsZWN0IGEgc2Vhc29uL2kpKVxuXG5cbmV4cGVjdChnZXRCeVRleHQoL3NlbGVjdCBhIHNlYXNvbi9pKSkudG9CZU9uRG9jdW1lbnQoKTtcblxufSk7Il19

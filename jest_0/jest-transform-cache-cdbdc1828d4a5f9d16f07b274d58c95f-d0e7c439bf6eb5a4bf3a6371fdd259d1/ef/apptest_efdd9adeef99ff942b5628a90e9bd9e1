@@ -1,0 +1,55 @@
+b6c27498208cfb8aeb91c7dc81ba27f2
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _react2 = require("@testing-library/react");
+
+var _App = _interopRequireDefault(require("./App"));
+
+var _userEvent = _interopRequireDefault(require("@testing-library/user-event"));
+
+var _fetchShow = require("./api/fetchShow");
+
+var _jsxFileName = "/home/thisguycodez/op/React-Testing-TV-Show/src/app.test.js";
+test('Is the App rendering without crashing', () => {
+  const mockApp = jest.fn();
+  const {
+    getByText,
+    getAllByText,
+    debug,
+    container
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: void 0
+  }));
+  expect(container.firstChild).toMatchSnapshot();
+  getByText(/Fetching data.../i);
+});
+test('User is able to select a season', async () => {
+  // mockFetchShow.mockResolvedValueOnce(showData);
+  const {
+    getByText,
+    getAllByText
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: void 0
+  }));
+  await (0, _react2.wait)(() => {
+    getByText(/select a season/i);
+  });
+
+  _userEvent.default.click(getByText(/select a season/i));
+
+  expect(getAllByText(/season /i)).toHaveLength(4);
+  expect(getAllByText(/season /i)).toBeGreaterThanOrEqualTo(4);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC50ZXN0LmpzIl0sIm5hbWVzIjpbInRlc3QiLCJtb2NrQXBwIiwiamVzdCIsImZuIiwiZ2V0QnlUZXh0IiwiZ2V0QWxsQnlUZXh0IiwiZGVidWciLCJjb250YWluZXIiLCJleHBlY3QiLCJmaXJzdENoaWxkIiwidG9NYXRjaFNuYXBzaG90IiwidXNlckV2ZW50IiwiY2xpY2siLCJ0b0hhdmVMZW5ndGgiLCJ0b0JlR3JlYXRlclRoYW5PckVxdWFsVG8iXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7QUFDQTs7QUFDQTs7O0FBR0FBLElBQUksQ0FBQyx1Q0FBRCxFQUEwQyxNQUFJO0FBQ2pELFFBQU1DLE9BQU8sR0FBR0MsSUFBSSxDQUFDQyxFQUFMLEVBQWhCO0FBQ0EsUUFBTTtBQUFFQyxJQUFBQSxTQUFGO0FBQWFDLElBQUFBLFlBQWI7QUFBMkJDLElBQUFBLEtBQTNCO0FBQW1DQyxJQUFBQTtBQUFuQyxNQUFnRCxvQkFBTyw2QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBQVAsQ0FBdEQ7QUFFQUMsRUFBQUEsTUFBTSxDQUFDRCxTQUFTLENBQUNFLFVBQVgsQ0FBTixDQUE2QkMsZUFBN0I7QUFHQU4sRUFBQUEsU0FBUyxDQUFDLG1CQUFELENBQVQ7QUFFQSxDQVRHLENBQUo7QUFjQUosSUFBSSxDQUFDLGlDQUFELEVBQW9DLFlBQVc7QUFDbkQ7QUFDQSxRQUFNO0FBQUVJLElBQUFBLFNBQUY7QUFBWUMsSUFBQUE7QUFBWixNQUE2QixvQkFBTyw2QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBQVAsQ0FBbkM7QUFFQSxRQUFNLGtCQUFLLE1BQUs7QUFDWkQsSUFBQUEsU0FBUyxDQUFDLGtCQUFELENBQVQ7QUFDSCxHQUZLLENBQU47O0FBS0FPLHFCQUFVQyxLQUFWLENBQWdCUixTQUFTLENBQUMsa0JBQUQsQ0FBekI7O0FBQ0FJLEVBQUFBLE1BQU0sQ0FBQ0gsWUFBWSxDQUFDLFVBQUQsQ0FBYixDQUFOLENBQWlDUSxZQUFqQyxDQUE4QyxDQUE5QztBQUNBTCxFQUFBQSxNQUFNLENBQUNILFlBQVksQ0FBQyxVQUFELENBQWIsQ0FBTixDQUFpQ1Msd0JBQWpDLENBQTBELENBQTFEO0FBRUMsQ0FiRyxDQUFKIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHJlbmRlciwgd2FpdCB9IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvcmVhY3QnO1xuaW1wb3J0IEFwcCBmcm9tICcuL0FwcCdcbmltcG9ydCB1c2VyRXZlbnQgZnJvbSAnQHRlc3RpbmctbGlicmFyeS91c2VyLWV2ZW50J1xuaW1wb3J0IHtmZXRjaFNob3cgYXMgbW9ja0ZldGNoU2hvd30gZnJvbSAnLi9hcGkvZmV0Y2hTaG93J1xuXG5cbnRlc3QoJ0lzIHRoZSBBcHAgcmVuZGVyaW5nIHdpdGhvdXQgY3Jhc2hpbmcnLCAoKT0+e1xuXHRjb25zdCBtb2NrQXBwID0gamVzdC5mbigpO1xuXHRjb25zdCB7IGdldEJ5VGV4dCwgZ2V0QWxsQnlUZXh0LCBkZWJ1ZyAsIGNvbnRhaW5lcn0gPSByZW5kZXIoPEFwcCAvPik7XG5cblx0ZXhwZWN0KGNvbnRhaW5lci5maXJzdENoaWxkKS50b01hdGNoU25hcHNob3QoKVxuXG5cdFxuXHRnZXRCeVRleHQoL0ZldGNoaW5nIGRhdGEuLi4vaSk7XG5cbn0pIFxuXG5cblxuXG50ZXN0KCdVc2VyIGlzIGFibGUgdG8gc2VsZWN0IGEgc2Vhc29uJywgYXN5bmMoKSA9PiB7XG4vLyBtb2NrRmV0Y2hTaG93Lm1vY2tSZXNvbHZlZFZhbHVlT25jZShzaG93RGF0YSk7XG5jb25zdCB7IGdldEJ5VGV4dCxnZXRBbGxCeVRleHQgfSA9IHJlbmRlcig8QXBwIC8+KTtcblxuYXdhaXQgd2FpdCgoKSA9PntcbiAgICBnZXRCeVRleHQoL3NlbGVjdCBhIHNlYXNvbi9pKVxufSkgXG5cblxudXNlckV2ZW50LmNsaWNrKGdldEJ5VGV4dCgvc2VsZWN0IGEgc2Vhc29uL2kpKVxuZXhwZWN0KGdldEFsbEJ5VGV4dCgvc2Vhc29uIC9pKSkudG9IYXZlTGVuZ3RoKDQpO1xuZXhwZWN0KGdldEFsbEJ5VGV4dCgvc2Vhc29uIC9pKSkudG9CZUdyZWF0ZXJUaGFuT3JFcXVhbFRvKDQpO1xuXG59KTsiXX0=

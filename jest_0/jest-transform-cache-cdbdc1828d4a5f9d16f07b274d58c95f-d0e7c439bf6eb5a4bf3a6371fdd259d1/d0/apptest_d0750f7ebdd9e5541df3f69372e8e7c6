@@ -1,0 +1,27 @@
+5ade0adae2bcf292d6382a374325b4e1
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _react2 = require("@testing-library/react");
+
+var _App = _interopRequireDefault(require("./App"));
+
+var _jsxFileName = "/home/thisguycodez/op/React-Testing-TV-Show/src/app.test.js";
+test('Is the App rendering without crashing', () => {
+  const mockApp = jest.fn();
+  const {
+    getByText,
+    queryByAll
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: void 0
+  }));
+  getByText(/Fetching data.../i);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC50ZXN0LmpzIl0sIm5hbWVzIjpbInRlc3QiLCJtb2NrQXBwIiwiamVzdCIsImZuIiwiZ2V0QnlUZXh0IiwicXVlcnlCeUFsbCJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBOztBQUNBOztBQUNBOzs7QUFLQUEsSUFBSSxDQUFDLHVDQUFELEVBQTBDLE1BQUk7QUFDakQsUUFBTUMsT0FBTyxHQUFHQyxJQUFJLENBQUNDLEVBQUwsRUFBaEI7QUFDQSxRQUFNO0FBQUNDLElBQUFBLFNBQUQ7QUFBWUMsSUFBQUE7QUFBWixNQUEwQixvQkFDL0IsNkJBQUMsWUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUQrQixDQUFoQztBQUlBRCxFQUFBQSxTQUFTLENBQUMsbUJBQUQsQ0FBVDtBQUNBLENBUEcsQ0FBSiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyByZW5kZXIgfSBmcm9tICdAdGVzdGluZy1saWJyYXJ5L3JlYWN0JztcbmltcG9ydCBBcHAgZnJvbSAnLi9BcHAnXG5cblxuXG5cbnRlc3QoJ0lzIHRoZSBBcHAgcmVuZGVyaW5nIHdpdGhvdXQgY3Jhc2hpbmcnLCAoKT0+e1xuXHRjb25zdCBtb2NrQXBwID0gamVzdC5mbigpO1xuXHRjb25zdCB7Z2V0QnlUZXh0LCBxdWVyeUJ5QWxsfSA9IHJlbmRlcihcblx0XHQ8QXBwIC8+XG4pO1xuXG5cdGdldEJ5VGV4dCgvRmV0Y2hpbmcgZGF0YS4uLi9pKVxufSkiXX0=

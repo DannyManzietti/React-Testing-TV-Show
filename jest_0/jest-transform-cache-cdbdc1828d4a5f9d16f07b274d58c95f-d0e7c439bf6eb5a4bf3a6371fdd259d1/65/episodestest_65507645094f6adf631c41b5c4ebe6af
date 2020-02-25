@@ -1,0 +1,70 @@
+b31d889af66241114199bb28da5bbff8
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _react2 = require("@testing-library/react");
+
+var _Episodes = _interopRequireDefault(require("./Episodes"));
+
+var _jsxFileName = "/home/thisguycodez/op/React-Testing-TV-Show/src/components/episodes.test.js";
+const showData = {
+  id: 2993,
+  name: "Stranger Things",
+  runtime: 60,
+  image: {
+    medium: "http://static.tvmaze.com/uploads/images/medium_portrait/200/501942.jpg",
+    original: "http://static.tvmaze.com/uploads/images/original_untouched/200/501942.jpg"
+  },
+  summary: "<p>A love letter to the '80s classics that captivated a generation, <b>Stranger Things</b> is set in 1983 Indiana, where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.</p>",
+  _embedded: {
+    episodes: [{
+      id: 553946,
+      name: "Chapter One: The Vanishing of Will Byers",
+      season: 1,
+      number: 1,
+      runtime: 60,
+      image: {
+        medium: "http://static.tvmaze.com/uploads/images/medium_landscape/67/168918.jpg",
+        original: "http://static.tvmaze.com/uploads/images/original_untouched/67/168918.jpg"
+      }
+    }, {
+      id: 909340,
+      name: "Chapter One: MADMAX",
+      season: 2,
+      number: 1,
+      runtime: 60,
+      image: {
+        medium: "http://static.tvmaze.com/uploads/images/medium_landscape/132/331976.jpg",
+        original: "http://static.tvmaze.com/uploads/images/original_untouched/132/331976.jpg"
+      }
+    }, {
+      id: 1576469,
+      name: "Chapter One: Suzie, Do You Copy?",
+      season: 3,
+      number: 1,
+      runtime: 51,
+      image: {
+        medium: "http://static.tvmaze.com/uploads/images/medium_landscape/204/510098.jpg",
+        original: "http://static.tvmaze.com/uploads/images/original_untouched/204/510098.jpg"
+      }
+    }]
+  }
+};
+test("renders Episodes without crashing", () => {
+  const {
+    queryAllByTestId,
+    rerender
+  } = (0, _react2.render)(_react.default.createElement(_Episodes.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: void 0
+  }));
+  expect(queryAllByTestId(/episode-card/i)).toHaveLength(0);
+}); // test('Episodes render properly', () => {
+// });
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVwaXNvZGVzLnRlc3QuanMiXSwibmFtZXMiOlsic2hvd0RhdGEiLCJpZCIsIm5hbWUiLCJydW50aW1lIiwiaW1hZ2UiLCJtZWRpdW0iLCJvcmlnaW5hbCIsInN1bW1hcnkiLCJfZW1iZWRkZWQiLCJlcGlzb2RlcyIsInNlYXNvbiIsIm51bWJlciIsInRlc3QiLCJxdWVyeUFsbEJ5VGVzdElkIiwicmVyZW5kZXIiLCJleHBlY3QiLCJ0b0hhdmVMZW5ndGgiXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTs7QUFDQTs7QUFDQTs7O0FBRUEsTUFBTUEsUUFBUSxHQUFHO0FBQ2JDLEVBQUFBLEVBQUUsRUFBRSxJQURTO0FBRWJDLEVBQUFBLElBQUksRUFBRSxpQkFGTztBQUdiQyxFQUFBQSxPQUFPLEVBQUUsRUFISTtBQUliQyxFQUFBQSxLQUFLLEVBQUU7QUFDTEMsSUFBQUEsTUFBTSxFQUNKLHdFQUZHO0FBR0xDLElBQUFBLFFBQVEsRUFDTjtBQUpHLEdBSk07QUFVYkMsRUFBQUEsT0FBTyxFQUNMLHFYQVhXO0FBWWJDLEVBQUFBLFNBQVMsRUFBRTtBQUNUQyxJQUFBQSxRQUFRLEVBQUUsQ0FDUjtBQUNFUixNQUFBQSxFQUFFLEVBQUUsTUFETjtBQUVFQyxNQUFBQSxJQUFJLEVBQUUsMENBRlI7QUFHRVEsTUFBQUEsTUFBTSxFQUFFLENBSFY7QUFJRUMsTUFBQUEsTUFBTSxFQUFFLENBSlY7QUFLRVIsTUFBQUEsT0FBTyxFQUFFLEVBTFg7QUFNRUMsTUFBQUEsS0FBSyxFQUFFO0FBQ0xDLFFBQUFBLE1BQU0sRUFDSix3RUFGRztBQUdMQyxRQUFBQSxRQUFRLEVBQ047QUFKRztBQU5ULEtBRFEsRUFjUjtBQUNFTCxNQUFBQSxFQUFFLEVBQUUsTUFETjtBQUVFQyxNQUFBQSxJQUFJLEVBQUUscUJBRlI7QUFHRVEsTUFBQUEsTUFBTSxFQUFFLENBSFY7QUFJRUMsTUFBQUEsTUFBTSxFQUFFLENBSlY7QUFLRVIsTUFBQUEsT0FBTyxFQUFFLEVBTFg7QUFNRUMsTUFBQUEsS0FBSyxFQUFFO0FBQ0xDLFFBQUFBLE1BQU0sRUFDSix5RUFGRztBQUdMQyxRQUFBQSxRQUFRLEVBQ047QUFKRztBQU5ULEtBZFEsRUEyQlI7QUFDRUwsTUFBQUEsRUFBRSxFQUFFLE9BRE47QUFFRUMsTUFBQUEsSUFBSSxFQUFFLGtDQUZSO0FBR0VRLE1BQUFBLE1BQU0sRUFBRSxDQUhWO0FBSUVDLE1BQUFBLE1BQU0sRUFBRSxDQUpWO0FBS0VSLE1BQUFBLE9BQU8sRUFBRSxFQUxYO0FBTUVDLE1BQUFBLEtBQUssRUFBRTtBQUNMQyxRQUFBQSxNQUFNLEVBQ0oseUVBRkc7QUFHTEMsUUFBQUEsUUFBUSxFQUNOO0FBSkc7QUFOVCxLQTNCUTtBQUREO0FBWkUsQ0FBakI7QUF5REFNLElBQUksQ0FBQyxtQ0FBRCxFQUFzQyxNQUFNO0FBQzVDLFFBQU07QUFBRUMsSUFBQUEsZ0JBQUY7QUFBb0JDLElBQUFBO0FBQXBCLE1BQWlDLG9CQUFPLDZCQUFDLGlCQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBQVAsQ0FBdkM7QUFDQUMsRUFBQUEsTUFBTSxDQUFDRixnQkFBZ0IsQ0FBQyxlQUFELENBQWpCLENBQU4sQ0FBMENHLFlBQTFDLENBQXVELENBQXZEO0FBQ0QsQ0FIQyxDQUFKLEMsQ0FPQTtBQUVBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHJlbmRlciB9IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvcmVhY3QnO1xuaW1wb3J0IEVwaXNvZGVzIGZyb20gJy4vRXBpc29kZXMnO1xuXG5jb25zdCBzaG93RGF0YSA9IHtcbiAgICBpZDogMjk5MyxcbiAgICBuYW1lOiBcIlN0cmFuZ2VyIFRoaW5nc1wiLFxuICAgIHJ1bnRpbWU6IDYwLFxuICAgIGltYWdlOiB7XG4gICAgICBtZWRpdW06XG4gICAgICAgIFwiaHR0cDovL3N0YXRpYy50dm1hemUuY29tL3VwbG9hZHMvaW1hZ2VzL21lZGl1bV9wb3J0cmFpdC8yMDAvNTAxOTQyLmpwZ1wiLFxuICAgICAgb3JpZ2luYWw6XG4gICAgICAgIFwiaHR0cDovL3N0YXRpYy50dm1hemUuY29tL3VwbG9hZHMvaW1hZ2VzL29yaWdpbmFsX3VudG91Y2hlZC8yMDAvNTAxOTQyLmpwZ1wiXG4gICAgfSxcbiAgICBzdW1tYXJ5OlxuICAgICAgXCI8cD5BIGxvdmUgbGV0dGVyIHRvIHRoZSAnODBzIGNsYXNzaWNzIHRoYXQgY2FwdGl2YXRlZCBhIGdlbmVyYXRpb24sIDxiPlN0cmFuZ2VyIFRoaW5nczwvYj4gaXMgc2V0IGluIDE5ODMgSW5kaWFuYSwgd2hlcmUgYSB5b3VuZyBib3kgdmFuaXNoZXMgaW50byB0aGluIGFpci4gQXMgZnJpZW5kcywgZmFtaWx5IGFuZCBsb2NhbCBwb2xpY2Ugc2VhcmNoIGZvciBhbnN3ZXJzLCB0aGV5IGFyZSBkcmF3biBpbnRvIGFuIGV4dHJhb3JkaW5hcnkgbXlzdGVyeSBpbnZvbHZpbmcgdG9wLXNlY3JldCBnb3Zlcm5tZW50IGV4cGVyaW1lbnRzLCB0ZXJyaWZ5aW5nIHN1cGVybmF0dXJhbCBmb3JjZXMgYW5kIG9uZSB2ZXJ5IHN0cmFuZ2UgbGl0dGxlIGdpcmwuPC9wPlwiLFxuICAgIF9lbWJlZGRlZDoge1xuICAgICAgZXBpc29kZXM6IFtcbiAgICAgICAge1xuICAgICAgICAgIGlkOiA1NTM5NDYsXG4gICAgICAgICAgbmFtZTogXCJDaGFwdGVyIE9uZTogVGhlIFZhbmlzaGluZyBvZiBXaWxsIEJ5ZXJzXCIsXG4gICAgICAgICAgc2Vhc29uOiAxLFxuICAgICAgICAgIG51bWJlcjogMSxcbiAgICAgICAgICBydW50aW1lOiA2MCxcbiAgICAgICAgICBpbWFnZToge1xuICAgICAgICAgICAgbWVkaXVtOlxuICAgICAgICAgICAgICBcImh0dHA6Ly9zdGF0aWMudHZtYXplLmNvbS91cGxvYWRzL2ltYWdlcy9tZWRpdW1fbGFuZHNjYXBlLzY3LzE2ODkxOC5qcGdcIixcbiAgICAgICAgICAgIG9yaWdpbmFsOlxuICAgICAgICAgICAgICBcImh0dHA6Ly9zdGF0aWMudHZtYXplLmNvbS91cGxvYWRzL2ltYWdlcy9vcmlnaW5hbF91bnRvdWNoZWQvNjcvMTY4OTE4LmpwZ1wiXG4gICAgICAgICAgfVxuICAgICAgICB9LFxuICAgICAgICB7XG4gICAgICAgICAgaWQ6IDkwOTM0MCxcbiAgICAgICAgICBuYW1lOiBcIkNoYXB0ZXIgT25lOiBNQURNQVhcIixcbiAgICAgICAgICBzZWFzb246IDIsXG4gICAgICAgICAgbnVtYmVyOiAxLFxuICAgICAgICAgIHJ1bnRpbWU6IDYwLFxuICAgICAgICAgIGltYWdlOiB7XG4gICAgICAgICAgICBtZWRpdW06XG4gICAgICAgICAgICAgIFwiaHR0cDovL3N0YXRpYy50dm1hemUuY29tL3VwbG9hZHMvaW1hZ2VzL21lZGl1bV9sYW5kc2NhcGUvMTMyLzMzMTk3Ni5qcGdcIixcbiAgICAgICAgICAgIG9yaWdpbmFsOlxuICAgICAgICAgICAgICBcImh0dHA6Ly9zdGF0aWMudHZtYXplLmNvbS91cGxvYWRzL2ltYWdlcy9vcmlnaW5hbF91bnRvdWNoZWQvMTMyLzMzMTk3Ni5qcGdcIlxuICAgICAgICAgIH1cbiAgICAgICAgfSxcbiAgICAgICAge1xuICAgICAgICAgIGlkOiAxNTc2NDY5LFxuICAgICAgICAgIG5hbWU6IFwiQ2hhcHRlciBPbmU6IFN1emllLCBEbyBZb3UgQ29weT9cIixcbiAgICAgICAgICBzZWFzb246IDMsXG4gICAgICAgICAgbnVtYmVyOiAxLFxuICAgICAgICAgIHJ1bnRpbWU6IDUxLFxuICAgICAgICAgIGltYWdlOiB7XG4gICAgICAgICAgICBtZWRpdW06XG4gICAgICAgICAgICAgIFwiaHR0cDovL3N0YXRpYy50dm1hemUuY29tL3VwbG9hZHMvaW1hZ2VzL21lZGl1bV9sYW5kc2NhcGUvMjA0LzUxMDA5OC5qcGdcIixcbiAgICAgICAgICAgIG9yaWdpbmFsOlxuICAgICAgICAgICAgICBcImh0dHA6Ly9zdGF0aWMudHZtYXplLmNvbS91cGxvYWRzL2ltYWdlcy9vcmlnaW5hbF91bnRvdWNoZWQvMjA0LzUxMDA5OC5qcGdcIlxuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgXVxuICAgIH1cbiAgfTtcblxudGVzdChcInJlbmRlcnMgRXBpc29kZXMgd2l0aG91dCBjcmFzaGluZ1wiLCAoKSA9PiB7XG4gICAgY29uc3QgeyBxdWVyeUFsbEJ5VGVzdElkLCByZXJlbmRlciB9ID0gcmVuZGVyKDxFcGlzb2RlcyAvPik7XG4gICAgZXhwZWN0KHF1ZXJ5QWxsQnlUZXN0SWQoL2VwaXNvZGUtY2FyZC9pKSkudG9IYXZlTGVuZ3RoKDApO1xuICB9KTtcblxuXG5cbi8vIHRlc3QoJ0VwaXNvZGVzIHJlbmRlciBwcm9wZXJseScsICgpID0+IHtcblxuLy8gfSk7Il19

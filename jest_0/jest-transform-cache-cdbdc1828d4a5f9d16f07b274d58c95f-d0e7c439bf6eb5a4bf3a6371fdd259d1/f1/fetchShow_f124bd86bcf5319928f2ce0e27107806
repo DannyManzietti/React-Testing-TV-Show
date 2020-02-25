@@ -1,0 +1,31 @@
+6f9c0757d5a67ac7ae0a45739e3e620f
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchShow = void 0;
+
+var _axios = _interopRequireDefault(require("axios"));
+
+// fetchShow.js
+const fetchShow = () => {
+  return _axios.default.get("https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes") // or res.data, however you want to set that up
+  .then(res => {
+    return res;
+  }).catch(err => {
+    return err;
+  });
+}; // App.js
+// useEffect(() => {
+//   fetchShow
+//     .then(res => {
+//       setSeasons(formatSeasons(res.data._embedded.episodes));
+//     }
+// }, []);
+
+
+exports.fetchShow = fetchShow;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZldGNoU2hvdy5qcyJdLCJuYW1lcyI6WyJmZXRjaFNob3ciLCJheGlvcyIsImdldCIsInRoZW4iLCJyZXMiLCJjYXRjaCIsImVyciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBRUE7QUFDTyxNQUFNQSxTQUFTLEdBQUcsTUFBTTtBQUM3QixTQUFPQyxlQUFNQyxHQUFOLENBQVUsNEVBQVYsRUFDSjtBQURJLEdBRUhDLElBRkcsQ0FFRUMsR0FBRyxJQUFHO0FBQ1osV0FBT0EsR0FBUDtBQUNILEdBSk8sRUFJTEMsS0FKSyxDQUlDQyxHQUFHLElBQUc7QUFDZCxXQUFPQSxHQUFQO0FBQ0EsR0FOTyxDQUFQO0FBT0QsQ0FSTSxDLENBVU47QUFDRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnXG5cbi8vIGZldGNoU2hvdy5qc1xuZXhwb3J0IGNvbnN0IGZldGNoU2hvdyA9ICgpID0+IHtcbiAgcmV0dXJuIGF4aW9zLmdldChcImh0dHBzOi8vYXBpLnR2bWF6ZS5jb20vc2luZ2xlc2VhcmNoL3Nob3dzP3E9c3RyYW5nZXItdGhpbmdzJmVtYmVkPWVwaXNvZGVzXCIpXG4gICAgIC8vIG9yIHJlcy5kYXRhLCBob3dldmVyIHlvdSB3YW50IHRvIHNldCB0aGF0IHVwXG4gICAgIC50aGVuKHJlcyA9PntcbiAgICAgcmV0dXJuIHJlc1xuIH0pLmNhdGNoKGVycj0+IHtcbiBcdHJldHVybiBlcnJcbiB9KVxufVxuICBcbiAvLyBBcHAuanNcbi8vIHVzZUVmZmVjdCgoKSA9PiB7XG4vLyAgIGZldGNoU2hvd1xuLy8gICAgIC50aGVuKHJlcyA9PiB7XG4vLyAgICAgICBzZXRTZWFzb25zKGZvcm1hdFNlYXNvbnMocmVzLmRhdGEuX2VtYmVkZGVkLmVwaXNvZGVzKSk7XG4vLyAgICAgfVxuLy8gfSwgW10pOyJdfQ==

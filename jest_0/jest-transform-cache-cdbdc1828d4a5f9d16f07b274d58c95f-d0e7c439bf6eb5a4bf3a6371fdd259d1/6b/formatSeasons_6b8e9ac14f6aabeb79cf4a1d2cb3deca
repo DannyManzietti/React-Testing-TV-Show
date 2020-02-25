@@ -1,0 +1,23 @@
+5b18cbea46861bf725e7bb1a16bfac42
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.formatSeasons = void 0;
+
+const formatSeasons = allEpisodes => {
+  const seasons = {};
+  allEpisodes.forEach(e => {
+    if (!seasons.hasOwnProperty(`Season ${e.season}`)) {
+      seasons[`Season ${e.season}`] = [];
+    }
+
+    seasons[`Season ${e.season}`].push(e);
+  });
+  console.log(seasons);
+  return seasons;
+};
+
+exports.formatSeasons = formatSeasons;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvcm1hdFNlYXNvbnMuanMiXSwibmFtZXMiOlsiZm9ybWF0U2Vhc29ucyIsImFsbEVwaXNvZGVzIiwic2Vhc29ucyIsImZvckVhY2giLCJlIiwiaGFzT3duUHJvcGVydHkiLCJzZWFzb24iLCJwdXNoIiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFPLE1BQU1BLGFBQWEsR0FBR0MsV0FBVyxJQUFJO0FBQzFDLFFBQU1DLE9BQU8sR0FBRyxFQUFoQjtBQUNBRCxFQUFBQSxXQUFXLENBQUNFLE9BQVosQ0FBb0JDLENBQUMsSUFBSTtBQUN2QixRQUFJLENBQUNGLE9BQU8sQ0FBQ0csY0FBUixDQUF3QixVQUFTRCxDQUFDLENBQUNFLE1BQU8sRUFBMUMsQ0FBTCxFQUFtRDtBQUNqREosTUFBQUEsT0FBTyxDQUFFLFVBQVNFLENBQUMsQ0FBQ0UsTUFBTyxFQUFwQixDQUFQLEdBQWdDLEVBQWhDO0FBQ0Q7O0FBQ0RKLElBQUFBLE9BQU8sQ0FBRSxVQUFTRSxDQUFDLENBQUNFLE1BQU8sRUFBcEIsQ0FBUCxDQUE4QkMsSUFBOUIsQ0FBbUNILENBQW5DO0FBQ0QsR0FMRDtBQU1BSSxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWVAsT0FBWjtBQUNBLFNBQU9BLE9BQVA7QUFDRCxDQVZNIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IGZvcm1hdFNlYXNvbnMgPSBhbGxFcGlzb2RlcyA9PiB7XG4gIGNvbnN0IHNlYXNvbnMgPSB7fTtcbiAgYWxsRXBpc29kZXMuZm9yRWFjaChlID0+IHtcbiAgICBpZiAoIXNlYXNvbnMuaGFzT3duUHJvcGVydHkoYFNlYXNvbiAke2Uuc2Vhc29ufWApKSB7XG4gICAgICBzZWFzb25zW2BTZWFzb24gJHtlLnNlYXNvbn1gXSA9IFtdO1xuICAgIH1cbiAgICBzZWFzb25zW2BTZWFzb24gJHtlLnNlYXNvbn1gXS5wdXNoKGUpO1xuICB9KTtcbiAgY29uc29sZS5sb2coc2Vhc29ucyk7XG4gIHJldHVybiBzZWFzb25zO1xufTtcbiJdfQ==

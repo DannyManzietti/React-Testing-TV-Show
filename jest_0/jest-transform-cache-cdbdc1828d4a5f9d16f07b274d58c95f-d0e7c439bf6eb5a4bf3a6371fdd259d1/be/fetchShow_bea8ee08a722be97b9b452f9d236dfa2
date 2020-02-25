@@ -1,0 +1,27 @@
+0d457424c7fc1ace956f2a25fe13bd80
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchShow = void 0;
+
+var _axios = _interopRequireDefault(require("axios"));
+
+// fetchShow.js
+const fetchShow = () => {
+  return _axios.default.get("https://api.tvmaze.com/singlesearch/shows?q=stranger-things&embed=episodes") // or res.data, however you want to set that up
+  .then(res => res).catch(err => err);
+}; // App.js
+// useEffect(() => {
+//   fetchShow
+//     .then(res => {
+//       setSeasons(formatSeasons(res.data._embedded.episodes));
+//     }
+// }, []);
+
+
+exports.fetchShow = fetchShow;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZldGNoU2hvdy5qcyJdLCJuYW1lcyI6WyJmZXRjaFNob3ciLCJheGlvcyIsImdldCIsInRoZW4iLCJyZXMiLCJjYXRjaCIsImVyciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7O0FBQUE7O0FBRUE7QUFDTyxNQUFNQSxTQUFTLEdBQUcsTUFBTTtBQUM3QixTQUFPQyxlQUFNQyxHQUFOLENBQVUsNEVBQVYsRUFDSjtBQURJLEdBRUhDLElBRkcsQ0FFRUMsR0FBRyxJQUFJQSxHQUZULEVBRWNDLEtBRmQsQ0FFb0JDLEdBQUcsSUFBR0EsR0FGMUIsQ0FBUDtBQUdELENBSk0sQyxDQU1OO0FBQ0Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF4aW9zIGZyb20gJ2F4aW9zJ1xuXG4vLyBmZXRjaFNob3cuanNcbmV4cG9ydCBjb25zdCBmZXRjaFNob3cgPSAoKSA9PiB7XG4gIHJldHVybiBheGlvcy5nZXQoXCJodHRwczovL2FwaS50dm1hemUuY29tL3NpbmdsZXNlYXJjaC9zaG93cz9xPXN0cmFuZ2VyLXRoaW5ncyZlbWJlZD1lcGlzb2Rlc1wiKVxuICAgICAvLyBvciByZXMuZGF0YSwgaG93ZXZlciB5b3Ugd2FudCB0byBzZXQgdGhhdCB1cFxuICAgICAudGhlbihyZXMgPT4gcmVzKS5jYXRjaChlcnI9PiBlcnIpXG59XG4gIFxuIC8vIEFwcC5qc1xuLy8gdXNlRWZmZWN0KCgpID0+IHtcbi8vICAgZmV0Y2hTaG93XG4vLyAgICAgLnRoZW4ocmVzID0+IHtcbi8vICAgICAgIHNldFNlYXNvbnMoZm9ybWF0U2Vhc29ucyhyZXMuZGF0YS5fZW1iZWRkZWQuZXBpc29kZXMpKTtcbi8vICAgICB9XG4vLyB9LCBbXSk7Il19

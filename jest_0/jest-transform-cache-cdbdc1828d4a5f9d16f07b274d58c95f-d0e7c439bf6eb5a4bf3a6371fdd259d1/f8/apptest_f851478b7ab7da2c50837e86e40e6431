@@ -1,0 +1,33 @@
+507886970a9fb225c9f823d4f1c88168
+"use strict";
+
+var _interopRequireDefault = require("/home/thisguycodez/op/React-Testing-TV-Show/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _react2 = require("@testing-library/react");
+
+var _App = _interopRequireDefault(require("./App"));
+
+var _userEvent = _interopRequireDefault(require("@testing-library/user-event"));
+
+var _fetchShow = require("./api/fetchShow");
+
+var _jsxFileName = "/home/thisguycodez/op/React-Testing-TV-Show/src/app.test.js";
+test('Is the App rendering without crashing', () => {
+  const mockApp = jest.fn();
+  const {
+    getByText,
+    queryByAll
+  } = (0, _react2.render)(_react.default.createElement(_App.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: void 0
+  }));
+  getByText(/Fetching data.../i);
+
+  _userEvent.default.click(getByText(/select a season/i));
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC50ZXN0LmpzIl0sIm5hbWVzIjpbInRlc3QiLCJtb2NrQXBwIiwiamVzdCIsImZuIiwiZ2V0QnlUZXh0IiwicXVlcnlCeUFsbCIsInVzZXJFdmVudCIsImNsaWNrIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7OztBQUdBQSxJQUFJLENBQUMsdUNBQUQsRUFBMEMsTUFBSTtBQUNqRCxRQUFNQyxPQUFPLEdBQUdDLElBQUksQ0FBQ0MsRUFBTCxFQUFoQjtBQUNBLFFBQU07QUFBQ0MsSUFBQUEsU0FBRDtBQUFZQyxJQUFBQTtBQUFaLE1BQTBCLG9CQUMvQiw2QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBRCtCLENBQWhDO0FBR0FELEVBQUFBLFNBQVMsQ0FBQyxtQkFBRCxDQUFUOztBQUVBRSxxQkFBVUMsS0FBVixDQUFnQkgsU0FBUyxDQUFDLGtCQUFELENBQXpCO0FBQ0EsQ0FSRyxDQUFKIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHJlbmRlciB9IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvcmVhY3QnO1xuaW1wb3J0IEFwcCBmcm9tICcuL0FwcCdcbmltcG9ydCB1c2VyRXZlbnQgZnJvbSAnQHRlc3RpbmctbGlicmFyeS91c2VyLWV2ZW50J1xuaW1wb3J0IHtmZXRjaFNob3cgYXMgbW9ja0ZldGNoU2hvd30gZnJvbSAnLi9hcGkvZmV0Y2hTaG93J1xuXG5cbnRlc3QoJ0lzIHRoZSBBcHAgcmVuZGVyaW5nIHdpdGhvdXQgY3Jhc2hpbmcnLCAoKT0+e1xuXHRjb25zdCBtb2NrQXBwID0gamVzdC5mbigpO1xuXHRjb25zdCB7Z2V0QnlUZXh0LCBxdWVyeUJ5QWxsfSA9IHJlbmRlcihcblx0XHQ8QXBwIC8+XG4pO1xuXHRnZXRCeVRleHQoL0ZldGNoaW5nIGRhdGEuLi4vaSk7XG5cblx0dXNlckV2ZW50LmNsaWNrKGdldEJ5VGV4dCgvc2VsZWN0IGEgc2Vhc29uL2kpKVxufSkiXX0=
